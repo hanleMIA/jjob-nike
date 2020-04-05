@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+body {
+  margin: 0px;
+  margin-top: 110px;
+  font-family: 'Noto Sans KR';
+}
+
+header {
+  top: 0px;
+  position: fixed;
+  background-color: white;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  z-index: 3;/*레이어 나누기*/
+}
+
+.header-left{
+  position: absolute;
+  left: 0px;
+  height: 40px;
+}
+
+.header-left li{
+  background-color: white;
+  list-style: none; /* 앞에 점 없애는거 */
+  float: left;
+  height: 40px;
+}
+
+.header-left-menu{
+  min-width: 80px;
+  border-right: 1px solid lightgray;
+}
+
+.header-left-menu a{
+  display: flex; 
+  padding: 0px 30px;
+  height: 40px;
+  box-sizing: border-box; 
+  text-decoration: none; /*밑줄 없어짐*/
+  align-items: center;
+}
+
+.header-left-menu a span{
+  color: gray;
+  font-size: 12px;
+}
+
+.header-left-menu a span:hover{
+  color: rgb(30, 30, 30);
+}
+
+.header-left-menu div{
+  height: 40px;
+  position: absolute;
+}
+
+/* header-left */
+
+.header-right{
+  position: absolute;
+  right: 20px;
+}
+
+.header-right-menu{
+  float: left;
+  list-style: none;
+  padding: 0 10px;
+}
+
+.header-right-menu a, .header-right-menu span{
+  cursor: pointer;
+  color: gray;
+  text-decoration: none;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+}
+
+nav {
+  top: 40px;
+  position: fixed;
+  background-color: white;
+  height:70px;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  z-index: 2;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.nav-left{
+  position: absolute;
+  font-weight: 900;
+  font-size: 35px;
+  left: 25px;
+}
+
+.nav-menu{
+  float: left;
+  list-style: none;
+  
+  letter-spacing: -2px; /* 글자하나하나간격 */
+  word-spacing: 5px; /* 띄워쓰기 간격*/
+}
+.nav-link{
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  height: 70px;
+  padding: 0px 20px;
+  line-height: 70px;
+  display: block; /* block 이어야 크기 바꾸기 가능*/
+}
+
+.nav-center{
+  
+}
+
+.nav-link:hover{
+  border-bottom: 1px solid rgb(65, 65, 65);
+}
+
+.nav-right{
+  position: absolute;
+  right: 25px;
+}
+
+.nav-category{
+  background-color: white;
+  top: 70px;
+  width: 100vw;
+  position: absolute;
+  left: 0px;
+  border-bottom: 1px solid lightgray;
+  display: none;
+  justify-content: center;
+}
+
+.nav-menu:hover .nav-category{
+  display: flex;
+}
+
+.nav-maxheight {
+  position: relative;
+  margin: 40px 0px;
+}
+
+.nav-category-box {
+  margin-right: 20px;
+  width: 180px;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.nav-category-box span{
+  margin: 2px 0px;
+}
+
+.nav-category-box span a{
+  color: black;
+  text-decoration: none;
+}
+
+.nav-category-box span a:hover {
+  color: gray;
+}
+
+.nav-category-box span a:focus {
+  color: red;
+}
+
+.nav-category-box span a:active {
+  color: blue;
+}
+
+.right-border:nth-child(n){
+  position: absolute;
+  content: '';
+  left: 180px;
+  top: 0px;
+  height: 100%;
+  border-right: 1px solid lightgray;
+}
+
+.right-border:nth-child(2n){
+  position: absolute;
+  content: ''; /* 내용*/
+  left: 580px;
+  top: 0px;
+  height: 100%;
+  border-right: 1px solid lightgray;
+}
+
+.nav-category-title{
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.text-space{
+  margin-top: 10px;
+}
+
+#login-div{
+  z-index: 100;
+  position:fixed;
+  width: 100vw;
+  top: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+#login-form{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding: 30px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: white;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#login-close{
+  cursor: pointer;
+  position: absolute;
+  line-height: 1;
+  text-align: center;
+  vertical-align: center;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+
+#login-form h1{
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 200;
+}
+
+#login-form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  outline: 0;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background-color: white;
+}
+
+#login-form input[type="submit"]{
+  border: 0;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+#login-form input[type="text"]:focus, #login-form input[type="password"]:focus{
+  border: 1px solid gray;
+}
+
+#login-center {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+#login-center a{
+  color: gray;
+  text-decoration: none;
+  font-size: 13px;
+  float: right;
+}
+
+#login-check input[type="checkbox"]{
+  float: left;
+  margin: 0px;
+}
+
+#login-check{
+  display: flex;
+  align-items: center;
+  float: left;
+}
+
+#login-check label{
+  font-size: 13px;
+  padding-left: 5px;
+  float: left;
+  color: gray;
+}
+
+.login-logo{
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.login-open{
+  display: block !important;
+  height: 100vh !important;
+  animation: fadein 1s 0s;
+  animation-fill-mode: forwards;
+}
+
+.login-open #login-form{
+  animation: uptodown 1s 0s;
+  animation-fill-mode: forwards;
+}
+
+.login-close{
+  display: block !important;
+  height: 100vh !important;
+  animation: fadeout 1s 0s,
+             noheight 0.001s 0.9s;
+animation-fill-mode: forwards;
+}
+
+.login-close #login-form{
+  animation: downtoup 1s 0s;
+}
+
+@keyframes fadein {
+  from {
+    background-color: rgba(0,0,0,0);
+  }
+  to {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
+@keyframes uptodown{
+  from{
+    top: 0px;
+  }
+  to{
+
+  }
+}
+
+@keyframes fadeout{
+  from{
+    opacity: 1;
+    background-color: rgba(0,0,0,0.4);
+  }
+  to{
+    opacity: 0;
+    background-color: rgba(0,0,0,0);
+  }
+}
+
+@keyframes noheight{
+  from{
+    height: 100vh;
+  }
+  to{
+    height: 0px;
+  }
+}
+
+@keyframes downtoup{
+  from{
+  }
+  to{
+    top: -100px;
+  }
+}
+
+/*section*/
+
+.main{
+  font-size: 32pt;
+  font-weight:bold;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 3px;
+}
+
+.sub{
+  text-align: center;
+}
+
+article img{
+  resize: both;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 96vw;
+}
+
+.article-content{
+  padding-bottom: 150px;
+  text-align: center;
+}
+
+.article-button{
+  padding-bottom: 50px;
+  left: 50%;
+  display: block;
+  margin-top: 20px;
+  transform: translate(-50%);
+  position: absolute;
+  height: fit-content;
+  width: 200px;
+  z-index: 1;
+}
+
+.article-button-title:after{
+  content: "▶";
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.article-button-title, .article-button-content{
+  color: white;
+  display: block;
+  background-color: black;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  width: 175px;
+  border-radius: 50px;
+  transition: background-color 0.5s ease;
+}
+
+.article-button-icon{
+  margin-left: 10px;
+}
+
+.article-button-content{
+  margin-top: 3px;
+  text-decoration: none;
+  display: none;
+  position: relative;
+}
+.article-button-content:hover, .article-button-title:hover{
+  background-color: rgba(0,0,0,0.5);
+  transition: background-color 0.5s ease;
+}
+.article-button:hover .article-button-content {
+  display: block;
+}
+
+.article-button:hover .article-button-title:after{
+  content: "▼";
+}
+
+@media only screen and (max-width:1000px){
+  nav, header{
+    display: none !important;
+  }
+  body{
+    margin-top: 0px !important;
+  }
+}
+
+
